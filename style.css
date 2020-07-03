@@ -1,0 +1,439 @@
+/* Custom properties/variables  */
+:root {
+  --main-white: #ee8572;
+  --main-red: #58b4ae;
+  --main-blue: #ee8572;
+  --main-gray: #ffd31d;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+ 
+}
+
+
+body {
+  color: #1f4068;
+  margin: 0;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    
+}
+
+html {
+  box-sizing: border-box;
+
+  /* Set font size for easy rem calculations
+   * default document font size = 16px, 1rem = 16px, 100% = 16px
+   * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+  */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* A few media query to set some font sizes at different screen sizes.
+ * This helps automate a bit of responsiveness.
+ * The trick is to use the rem unit for size values, margin and padding.
+ * Because rem is relative to the document font size
+ * when we scale up or down the font size on the document
+ * it will affect all properties using rem units for the values.
+*/
+
+/* I am using the em unit for breakpoints
+ * The calculation is the following
+ * screen size divided by browser base font size
+ * As an example: a breakpoint at 980px
+ * 980px / 16px = 61.25em
+*/
+
+.top-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: lightgrey;
+  background-image: url('https://images.pexels.com/photos/1420701/pexels-photo-1420701.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940');
+  background-repeat: no-repeat;
+     position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.profile {
+    flex-direction: column;
+  justify-content: center;
+  align-items: center;
+     width: 100%;
+  
+   background-color: #f4ea8e;
+   
+    padding-right: 15px;
+    padding-left: 15px;
+  padding-bottom: 105px;
+}
+
+.profile-link {
+   display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+      font-size: 2.4rem;
+  text-shadow: 1px 1px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  
+}
+
+.clearfix {
+  clear: both;
+
+}
+
+.laptop-image, .project-view {
+   border-radius: 10px;
+}
+
+
+.contact {
+     flex-direction: column;
+  justify-content: center;
+  align-items: center;
+     width: 100%;
+   background-color: #f4ea8e;
+  position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+  
+    display: grid | inline-grid;
+  grid-template-columns: [first] 50px [line2] 50px;
+  grid-template-rows: 25% 100px auto;
+    
+}
+
+
+
+
+ #welcome-section {
+   width: 100%;
+  height: 100vh;
+}
+
+#projects {
+  
+}
+
+.projects-section {
+
+}
+
+@media (max-width: 61.25em)
+html {
+    font-size: 58%;
+}
+  
+
+@media (max-width: 75em)
+html {
+    font-size: 60%;
+}
+
+/* can use line-height: 2;  to double the space between headings*/
+
+h1 {
+  font-size: 2.625rem;
+  margin:0 auto 0 auto;
+color: #1f4068;
+ font-family: 'Quicksand', sans-serif;
+
+}
+
+#based-in-newcastle {
+  font-family: 'Quicksand', sans-serif;
+
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 2.5rem;
+  color: #1f4068;
+  font-weight: normal;
+
+}
+
+h3 {
+  font-family: 'Quicksand', sans-serif;
+  color: #1f4068;
+}
+
+p {
+  line-height: 2;
+}
+
+hr {
+  border-style: none;
+  border-top-style: dotted;
+  border-width: 5px;
+  border-color: #EAF6F6;
+  height: 0;
+  width: 8%;
+}
+
+a {
+  color: #1f4068;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  text-decoration: none;
+}
+
+div {
+  display: block;
+  
+}
+
+a:hover {
+  color: #EAF6F6;
+  
+}
+
+
+ .about-title, .projects-title, .contact-title {
+padding: 6rem 0;
+   font-size: 60px;
+}
+
+.dorothy-parker, .survey, .tech-doc, .landing-page, .project-tile {
+ position: relative;
+    
+    padding-right: 15px;
+    padding-left: 15px;
+  width: 50%;
+min-width: 200px;
+  max-width: 500px;
+  float: left;
+   padding-bottom: 20px;
+}
+
+.footer-link {
+  float: none;
+}
+
+.statement {
+ position: relative;
+    font-size: 22px;
+    padding-right: 15px;
+    padding-left: 15px;
+  width: 50%;
+min-width: 200px;
+  max-width: 500px;
+  float: left;
+   padding-bottom: 20px;
+}
+
+.statement1 {
+ position: relative;
+        padding-right: 15px;
+    padding-left: 15px;
+  width: 50%;
+min-width: 200px;
+  max-width: 500px;
+  float: left;
+}
+
+.overall-statement, .overall-projects {
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 3rem;
+}
+
+
+/* this .container section solved the layout issue */
+.container {
+    display: grid | inline-grid;
+  grid-template-columns: [first] 50px [line2] 50px;
+  grid-template-rows: 25% 100px auto;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%; /* two containers (use 25% for four, and 33.33% for three, etc) */
+  padding: 5px; /* if you want space between the images */
+  
+}
+
+.contact-container {
+    font-size: 4rem;
+ min-height:100vh;
+}
+
+
+
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 460px / 16px = 28.75em */
+@media (max-width: 28.75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+
+
+
+/*(clear cancels float)*/
+
+.testbutton {
+  display:inline-block;
+  font-family: 'Quicksand', sans-serif;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-shadow: 1px 1px 0 #7CACDE;
+  box-shadow: 1px 1px 1px #1f4068;
+  padding: 20px 25px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  border: 2px solid #3866A3;
+  background: #63B8EE;
+  background: linear-gradient(top,  #11CDD4,  #11999E);
+  background: -ms-linear-gradient(top,  #11CDD4,  #11999E);
+  background: from(#11CDD4), to(#11999E);
+  background: -moz-linear-gradient(top,  #11CDD4,  #11999E);
+  transition: transform .1s ease-in-out;
+}
+.testbutton:hover {
+  color: #14396A;
+  background: #468CCF;
+  background: linear-gradient(top,  #30ECCB,  #2bc4ad);
+  background: -ms-linear-gradient(top,  #30ECCB,  #2bc4ad);
+  background: from(#30ECCB), to(#2bc4ad);
+  background: -moz-linear-gradient(top,  #30ECCB,  #2bc4ad);
+transform: scale(.95);
+}
+
+
+
+.pro {
+  text-decoration: underline;
+}
+
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: #1f4068;
+  font-size: 2rem;
+  padding: 2px 0;
+  text-align: center;
+   display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+
+
+
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+  list-style-type: none;
+}
+
+@media (max-width: 28.75em) {
+  .nav {
+    justify-content: center;
+  }
+  
+  
+
+  .nav-list {
+    margin: 0 1rem;
+  }
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.5rem;
+  padding: 2rem;
+  
+}
+
+.nav-list a:hover {
+  background: var(--main-blue);
+}
+
+ul.nav-bar li.left {float: left;}
+
+@media screen and (max-width: 600px) {
+  ul.nav-bar li.left, 
+  ul.nav-bar li {float: none;}
+}
+
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#attribution {
+   display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  color: #1f4068;
+  font-size: 2rem;
+  padding: 2px 0;
+  text-align: center;
+}
